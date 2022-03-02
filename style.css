@@ -69,7 +69,7 @@
     box-shadow: 0 10px 20px -20px black;
 }
 
-.form-container>p{
+.form-container > p {
     font-size: 1.5rem;
 }
 
@@ -82,20 +82,20 @@
     gap: 30px;
 }
 
-.bottom-part-container>div{
+.bottom-part-container > div {
     display: flex;
     gap: 5px;
 }
 
-.bottom-part-container>div>a{
+.bottom-part-container > div > a {
     color: rgba(53, 65, 12, 0.7);
 }
 
-.bottom-part-container>div>a:hover{
+.bottom-part-container > div > a:hover {
     cursor: pointer;
 }
 
-.bottom-part-container>button{
+.bottom-part-container > button {
     width: 200px;
     height: 50px;
     padding: 10px 30px;
@@ -114,6 +114,7 @@
 .input-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -148,8 +149,31 @@ input:focus {
     border: 2px solid rgba(53, 65, 12, 0.7);
 }
 
-input:invalid {
+.requirements{
+    visibility: hidden;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    width: 160px;
+    font-style: italic;
+}
+
+.requirements-shown {
+    padding-top: 10px;
+    font-size: 0.8rem;
+    width: 160px;
+    color: red;
+    font-style: italic;
+    visibility: visible;
+}
+
+input:not(:placeholder-shown):invalid {
     outline: none;
     border-radius: 5px;
-    border: 2px solid red;
+    border: 2px solid rgb(199, 30, 0);
+}
+
+input:not(:placeholder-shown):valid{
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 87, 185);
 }

@@ -16,6 +16,7 @@
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
             rel="stylesheet"
         />
+        <script src="main.js" defer></script>
         <title>My Login Page</title>
     </head>
     <body>
@@ -44,35 +45,74 @@
                     <div class="input-container">
                         <div>
                             <div class="input-field">
-                                <label for="first-name">FIRST NAME</label>
-                                <input type="text" name="first-name" id="" />
+                                <label for="first-name">FIRST NAME*</label>
+                                <input
+                                    type="text"
+                                    name="first-name"
+                                    id="first-name"
+                                    required
+                                    placeholder=" "
+                                />
                             </div>
                             <div class="input-field">
-                                <label for="last-name">LAST NAME</label>
-                                <input type="text" name="last-name" id="" />
+                                <label for="last-name">LAST NAME*</label>
+                                <input
+                                    type="text"
+                                    name="last-name"
+                                    id="last-name"
+                                    required
+                                    placeholder=" "
+                                />
                             </div>
                         </div>
                         <div>
                             <div class="input-field">
-                                <label for="email">EMAIL</label>
-                                <input type="email" name="email" id="" />
+                                <label for="email">EMAIL*</label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                                    required
+                                    placeholder=" "
+                                />
                             </div>
                             <div class="input-field">
                                 <label for="phone">PHONE NUMBER</label>
-                                <input type="tel" name="phone" id="" />
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    pattern="[0-9]{10}"
+                                    placeholder=" "
+                                />
                             </div>
                         </div>
                         <div>
                             <div class="input-field">
-                                <label for="psw">PASSWORD</label>
-                                <input type="password" name="psw id="" />
+                                <label for="psw">PASSWORD*</label>
+                                <input
+                                    type="password"
+                                    name="psw"
+                                    id="password"
+                                    required
+                                    placeholder=" "
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                                />
+                                <div class="requirements">
+                                    Your password must be at least 6 characters
+                                    as well as contain at least one uppercase,
+                                    one lowercase, and one number.
+                                </div>
                             </div>
                             <div class="input-field">
-                                <label for="repeat-psw">REPEAT PASSWORD</label>
+                                <label for="repeat-psw">REPEAT PASSWORD*</label>
                                 <input
                                     type="password"
                                     name="repeat-psw"
-                                    id=""
+                                    required
+                                    placeholder=" "
+                                    pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
                                 />
                             </div>
                         </div>
