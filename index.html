@@ -98,11 +98,15 @@
                                     required
                                     placeholder=" "
                                     pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                                    onkeyup="onChange()"
                                 />
                                 <div class="requirements">
-                                    Your password must be at least 6 characters
-                                    as well as contain at least one uppercase,
-                                    one lowercase, and one number.
+                                    <p>
+                                        Your password must be at least 8
+                                        characters as well as contain at least
+                                        one letter, one number and one special
+                                        character
+                                    </p>
                                 </div>
                             </div>
                             <div class="input-field">
@@ -110,16 +114,23 @@
                                 <input
                                     type="password"
                                     name="repeat-psw"
+                                    id="repeat-psw"
                                     required
                                     placeholder=" "
                                     pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+                                    onkeyup="onChange()"
                                 />
+                                <div class="requirements">
+                                    <p>Password doesn't match</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bottom-part-container">
-                    <button type="submit">Create account</button>
+                    <button type="submit" id="submit-button">
+                        Create account
+                    </button>
                     <div>
                         <p>Already have an account?</p>
                         <a>Log in</a>
